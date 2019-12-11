@@ -4,12 +4,18 @@ module.exports = {
     node: true
   },
   'extends': [
-    'plugin:vue/essential',
+    'plugin:vue/recommended',
     '@vue/standard'
   ],
   rules: {
-    'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
-    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off'
+    "quotes": ['error', 'single'],
+    //强制不使用分号结尾
+    "semi": ['error','never'],
+    'no-console': 'off',
+    'no-debugger': 'off',
+    'vue/require-v-for-key': 'warning',
+    "vue/max-attributes-per-line": "off",
+    "vue/singleline-html-element-content-newline": "off"
   },
   parserOptions: {
     parser: 'babel-eslint'
